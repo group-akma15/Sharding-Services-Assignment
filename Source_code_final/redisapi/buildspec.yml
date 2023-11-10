@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Building and Running tests..."
+artifacts:
+  files:
+    - main.py
+    - requirements.txt
+  name: fastapi-app-artifact
